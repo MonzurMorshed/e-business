@@ -1,0 +1,35 @@
+body{
+    min-height: 600px;
+}
+
+header{
+    height: 250px;
+    background: #6767c2;
+}
+
+header > span{
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: table;
+    padding: 75px;
+    color: #fff;
+}
+
+.divider1,.divider2{
+    background: #6767c2;
+    height: 1px;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.heading4{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+footer{
+    margin-top: 20px;
+    height: 100px;
+    background: #6767c2;
+}
