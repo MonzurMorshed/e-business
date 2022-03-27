@@ -48,7 +48,7 @@ header > span{
 }
 
 footer{
-    height: 100px;
+    height: 50px;
     background: #6767c2;
 }
 
@@ -109,4 +109,12 @@ input.tgl-radio-tab-child {
 .brand1, .brand2, .brand3, .brand4 {
     padding-left: 3.02em !important;
     padding-right: 3.02em !important;
+}
+
+.footer_span{
+    margin: 0 auto;
+    display: table;
+    padding: 15px;
+    font-weight: 600;
+    color: #fff;
 }

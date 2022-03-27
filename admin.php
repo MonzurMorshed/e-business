@@ -1,6 +1,6 @@
 <?php 
 
-include 'db.php';
+include 'layout/header.php';
 $_SESSION['loggedIn'] = 0;
 $loginbtn = '';
 $loggedIn = '';
@@ -28,30 +28,30 @@ if($_SESSION['loggedIn'] == 0){
     $loginForm = '
     
         <div class="row reserve">
-        <form class="col-md-8 col-md-offset-2" method="post" action="admin.php">
+        <form class="reserveForm" method="post" action="admin.php">
             <div class="row">
-                <div class="errormsg">';
-                    if(isset($_GET['errormsg'])){
-                        $error_msg = $_GET['errormsg'];
-                        $errormsg = json_decode($error_msg,true);
-                        foreach($errormsg as $val){
-                            $loginForm .= '<p style="padding:5px;" class="alert alert-danger">'.$val.'</p>';
+                <div class="row reserve">            
+                    <div class="errormsg">';
+                        if(isset($_GET['errormsg'])){
+                            $error_msg = $_GET['errormsg'];
+                            $errormsg = json_decode($error_msg,true);
+                            foreach($errormsg as $val){
+                                $loginForm .= '<p style="padding:5px;" class="alert alert-danger">'.$val.'</p>';
+                            }
                         }
-                    }
-
-                $loginForm .= '</div>
-
-                <div class="errormsg">';
-
-                    if(isset($_GET['success'])){
-                        $success_msg = $_GET['success'];
-                        $loginForm .= '<p style="padding:5px;" class="alert alert-success">'.$success_msg.'</p>';
-                        
-                    }
 
                     $loginForm .= '</div>
 
-            </div>
+                    <div class="errormsg">';
+
+                        if(isset($_GET['success'])){
+                            $success_msg = $_GET['success'];
+                            $loginForm .= '<p style="padding:5px;" class="alert alert-success">'.$success_msg.'</p>';
+                            
+                        }
+
+                        $loginForm .= '</div>
+
             
             <div class="row mt-3">
                 <h3 class="heading text-center">Login</h3>
@@ -84,21 +84,6 @@ if($_SESSION['loggedIn'] == 0){
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>Reserve and Pick Up - Login</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="css/style.css"/>
-
-</head>
 <body>
 
 <div class="">
@@ -109,7 +94,7 @@ if($_SESSION['loggedIn'] == 0){
     </header>
     <div class="container-fluid  content-body">
 
-        <h1 class="text-center" style="padding:20px;">C & C - Reserve and Pick Up</h1>
+        <h3 class="text-center" style="padding:20px;">C & C - Reserve and Pick Up</h3>
 
         <?php 
             if($_SESSION['loggedIn'] == 0){
@@ -162,16 +147,8 @@ if($_SESSION['loggedIn'] == 0){
         
     </div>
 </div>
-<footer class="header Conrainer"></footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#example').DataTable();
-    } );
-</script>
+<?php include 'layout/footer.php'; ?>
 
 </body>
 </html>
