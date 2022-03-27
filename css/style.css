@@ -28,8 +28,85 @@ header > span{
     font-weight: 500;
 }
 
+/* .loginBtn{
+    right: 0;
+    top: 0;
+    position: absolute;
+} */
+
+.loginBtn {
+    /* right: 0; */
+    /* top: 0; */
+    float: right;
+    margin-right: 30px;
+    margin-top: -200px;
+    background: gray;
+    color: #fff;
+    border-radius: 0px;
+    border: 0px;
+    width: 100px;
+}
+
 footer{
-    margin-top: 20px;
     height: 100px;
     background: #6767c2;
+}
+
+#example_paginate,#example_filter{
+    float:right;
+}
+
+.content-body{
+    background: #333;
+    color: #fff;
+}
+
+.reserveform {
+    padding: 10px;
+    width: 400px;
+    margin: 0 auto;
+    display: table;
+}
+
+.form-control, button{
+    border-radius: 0px !important;
+}
+
+.tc, .sbmt{
+    background-color: rgb(223, 61, 88);
+}
+
+/* select , radio input */
+input.tgl-radio-tab-child {
+    /* position: absolute; */
+    left: -99999em;
+    top: -99999em;
+    opacity: 1;
+    z-index: 1;
+    /* new */
+    display: none; 
+  }
+  
+  input.tgl-radio-tab-child+label {
+    cursor: pointer;
+    float: left;
+    border: 1px solid #aaa;
+    margin-right: -1px;
+    padding: .8em 2.23em;
+    position: relative;
+  }
+  
+  input.tgl-radio-tab-child+label:hover {
+    background-color: rgb(42, 37, 37);
+  }
+  
+  [type=radio]:checked+label {
+    background-color: rgb(223, 61, 88);
+    z-index: 1;
+  }
+/* end */
+
+.brand1, .brand2, .brand3, .brand4 {
+    padding-left: 3.02em !important;
+    padding-right: 3.02em !important;
 }
